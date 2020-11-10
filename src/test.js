@@ -2,6 +2,8 @@ import foo from './foo.js'
 
 export const fnReact = (props)=>{
 	return (
-		<div id='foo'/> 
+		<div id='root'>
+			<span id='child'>Julian</span>
+		</div> 
 	)
 }
