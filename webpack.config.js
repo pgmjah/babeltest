@@ -8,7 +8,9 @@ module.exports = (env) => {
 	return {
 		devtool: 'inline-source-map',
 		mode: 'development',
-		entry: './src/test.js',
+		entry: {
+			'main':'./src/test.js'
+		},
 		output: {
 			publicPath: '/',
 			path: path.resolve(__dirname, 'build'),
@@ -41,7 +43,6 @@ module.exports = (env) => {
 			new HtmlWebPackPlugin({
 				template: './index.html',
 				filename: 'index.html',
-				title:'babel test app',
 			})
 		],
 	};
