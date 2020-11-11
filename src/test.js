@@ -1,9 +1,9 @@
-import foo from './foo.js'
 
-export const fnReact = (props)=>{
-	return (
-		<div id='root'>
-			<span id='child'>Julian</span>
-		</div> 
-	)
-}
+const fnTest = (a, b) => `${a} ${b}`;
+const res = fnTest('julian', 'hyman');
+console.log(res);
+
+const ar = [1, 2, 3];
+console.log(ar.includes(2));
+  
+//# sourceURL=test.js 
