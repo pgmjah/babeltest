@@ -9,12 +9,21 @@ module.exports = (env) => {
 		devtool: 'inline-source-map',
 		mode: 'development',
 		entry: {
-			'main':'./src/test.js'
+			app: ['./src/test.js'],
 		},
 		output: {
 			publicPath: '/',
 			path: path.resolve(__dirname, 'build'),
 			filename: 'bundle.js',
+			environment:{
+				arrowFunction:false,
+				destructuring:false,
+				const:false,
+				forOf:false,
+				module:false,
+				dynamicImport:false,
+				bigIntLiteral:false,
+			}
 		},
 		module: {
 			rules: [
