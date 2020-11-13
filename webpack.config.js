@@ -9,26 +9,28 @@ module.exports = (env) => {
 		devtool: 'inline-source-map',
 		mode: 'development',
 		entry: {
-			app: ['./src/test.js'],
+			app: ['./src/foo.js'],
 		},
 		output: {
 			publicPath: '/',
 			path: path.resolve(__dirname, 'build'),
 			filename: 'bundle.js',
-			environment:{
-				arrowFunction:false,
-				destructuring:false,
-				const:false,
-				forOf:false,
-				module:false,
-				dynamicImport:false,
-				bigIntLiteral:false,
+			library: 'Foo',
+			libraryTarget:'umd',
+			environment: {
+				arrowFunction: false,
+				destructuring: false,
+				const: false,
+				forOf: false,
+				module: false,
+				dynamicImport: false,
+				bigIntLiteral: false,
 			}
 		},
 		module: {
 			rules: [
 				{
-					test: /\.(js|jsx)$/,
+					test: /\.(js|jsx|html|htm)$/,
 					exclude: /(node_modules|bower_components)/,
 					use: {
 						loader: 'babel-loader',
