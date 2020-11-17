@@ -2,6 +2,7 @@
 	"name": "test",
 	"version": "1.0.0",
 	"description": "",
+	"type":"module",
 	"scripts": {
 		"build": "npx webpack",
 		"babel": "npx babel -w ./src -d build"
