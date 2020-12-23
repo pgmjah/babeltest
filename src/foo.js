@@ -9,4 +9,5 @@ export{
 	Bar,
 	Baz
 }
+
 //# sourceURL=foo.js
